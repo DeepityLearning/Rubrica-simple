@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dettaglio Contatto</title>
+    <link rel="stylesheet" href="./detail-style.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <a class="action" href="../">🠈</a>
+            <h1>Modifica Contatto</h1>
+        </header>
+        <main>
+            <form id="edit-form">
+                
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input class="form-input" type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="surname">Cognome</label>
+                    <input class="form-input" type="text" id="surname" name="surname">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefono</label>
+                    <input class="form-input" type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-input" type="email" id="email" name="email">
+                </div>
+
+                <div class="btn-container">
+                    <button class="text-btn save-btn" type="submit">Salva Modifiche</button>
+                    <button class="text-btn delete-btn" type="button" id="delete-btn">Elimina Contatto</button>
+                </div>
+            </form>                       
+        </main>
+    </div>
+</body>
+<script type="module" src="./detail-script.js"></script>
+</html>
