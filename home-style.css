@@ -1,0 +1,242 @@
+@import url('./shared/style.css');
+
+/* Reset base per garantire altezza piena */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f8f9fa; /* Grigio chiarissimo elegante */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* LAYOUT PRINCIPALE */
+.page-layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Occupa tutta l'altezza dello schermo */
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    position: relative; /* Necessario per posizionare elementi assoluti se servisse */
+}
+
+/* HEADER FISSO */
+/* --- INIZIO SEZIONE HEADER FISSO CORRETTA --- */
+
+.fixed-header {
+    padding: 24px; /* Un po' più di spazio */
+    background-color: white;
+    z-index: 10;
+    border-bottom: 1px solid #eee;
+    flex-shrink: 0;
+    position: relative; /* FONDAMENTALE: rende questo div il riferimento per il pulsante */
+}
+
+/* Rimuoviamo la top-row complessa, ora basta un margine sotto al titolo */
+.top-row {
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #333;
+    font-weight: 700;
+}
+
+/* IL PULSANTE "+" CORRETTO */
+.btn-add-floating {
+    position: absolute; /* Si sgancia dal flusso normale */
+    top: 24px;          /* Distanza dall'alto (uguale al padding dell'header) */
+    right: 24px;        /* Distanza da destra */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #007AFF;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 20; /* Assicura che sia sopra a tutto */
+}
+
+.btn-add-floating:hover {
+    background: #005ecb;
+    transform: scale(1.05);
+}
+
+/* Riga Controlli (Search + Sort) */
+.controls-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* ... il resto (search-wrapper, modern-input, etc.) rimane uguale ... */
+
+/* --- FINE SEZIONE HEADER FISSO CORRETTA --- */
+
+/* Tasto + in alto a destra */
+.btn-add-floating {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #007AFF; /* Blu Apple style */
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 122, 255, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-add-floating:hover {
+    background: #005ecb;
+    transform: scale(1.05);
+}
+
+/* Riga Controlli (Search + Sort) */
+.controls-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Input ricerca moderno */
+.search-wrapper {
+    position: relative;
+    flex-grow: 1; /* Occupa tutto lo spazio disponibile */
+}
+
+.search-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    width: 18px;
+}
+
+.modern-input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Spazio a sinistra per l'icona */
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    background-color: #f6f8fa;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+    box-sizing: border-box; /* Importante per il padding */
+}
+
+.modern-input:focus {
+    border-color: #007AFF;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+/* Bottone Ordina Moderno */
+.modern-btn {
+    padding: 10px 16px;
+    background-color: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    white-space: nowrap; /* Non andare a capo */
+    transition: all 0.2s;
+}
+
+.modern-btn:hover {
+    background-color: #f1f1f1;
+    color: #333;
+    border-color: #d1d4d8;
+}
+
+.modern-btn:active {
+    transform: scale(0.98);
+}
+
+/* AREA SCORREVOLE */
+.scrollable-content {
+    flex-grow: 1; /* Prende tutto lo spazio rimanente */
+    overflow-y: auto; /* Abilita lo scroll solo qui */
+    padding: 10px 16px;
+}
+
+/* Card Contatto Ridisegnata */
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    margin-bottom: 12px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid transparent;
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: #f0f0f0;
+}
+
+.info-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 4px;
+}
+
+.info-phone {
+    font-size: 14px;
+    color: #888;
+}
+
+.actions-group {
+    display: flex;
+    gap: 8px;
+}
+
+/* Pulsanti Azione Piccoli */
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn.edit {
+    color: #007AFF;
+    background-color: rgba(0, 122, 255, 0.05);
+}
+
+.icon-btn.delete {
+    color: #FF3B30;
+    background-color: rgba(255, 59, 48, 0.05);
+}
+
+.icon-btn:hover {
+    filter: brightness(0.9);
+}

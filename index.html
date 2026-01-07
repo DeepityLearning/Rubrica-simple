@@ -9,26 +9,36 @@
 </head>
 
 <body>
-    <div class="page">
-        <div>
-            <header>
+    <div class="page-layout">
+        
+        <div class="fixed-header">
+            
+            <div class="top-row">
                 <h1>Rubrica</h1>
-            </header>
-            <main>
-                <div style="display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap;">
-                    <input type="text" id="search-input" placeholder="Cerca contatti..." class="text-btn" style="flex-grow: 1; border: 1px solid #ccc;">
-                    <button class="text-btn" id="sort-az-btn">Ordina A-Z</button>
+                <a class="btn-add-floating" href="./new/new.html">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="controls-row">
+                <div class="search-wrapper">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="search-input" placeholder="Cerca nome o numero..." class="modern-input">
                 </div>
                 
-                <div id="contacts-container">
-                    </div>
-            </main>
+                <button class="modern-btn" id="sort-toggle-btn">
+                    Ordina A-Z
+                </button>
+            </div>
         </div>
-        <div class="actions-container">
-            <a class="action" href="./new/new.html">+</a>
-        </div>
+
+        <div class="scrollable-content" id="contacts-container">
+            </div>
+
     </div>
 </body>
 <script type="module" src="./script.js"></script>
 </html>
- 

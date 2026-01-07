@@ -3,44 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dettaglio Contatto</title>
+    <title>Modifica Contatto</title>
     <link rel="stylesheet" href="./detail-style.css">
 </head>
 <body>
-    <div class="page">
-        <header>
-            <a class="action" href="../">🠈</a>
+    <div class="page-layout">
+        
+        <div class="fixed-header">
+            <a class="back-btn" href="../">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </a>
             <h1>Modifica Contatto</h1>
-        </header>
-        <main>
+        </div>
+
+        <div class="scrollable-content">
             <form id="edit-form">
                 
                 <div class="form-group">
                     <label for="name">Nome</label>
-                    <input class="form-input" type="text" id="name" name="name" required>
+                    <input class="modern-input" type="text" id="name" name="name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="surname">Cognome</label>
-                    <input class="form-input" type="text" id="surname" name="surname">
+                    <input class="modern-input" type="text" id="surname" name="surname">
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Telefono</label>
-                    <input class="form-input" type="tel" id="phone" name="phone" required>
+                    <input class="modern-input" type="tel" id="phone" name="phone" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input class="form-input" type="email" id="email" name="email">
+                    <input class="modern-input" type="email" id="email" name="email">
                 </div>
 
                 <div class="btn-container">
-                    <button class="text-btn save-btn" type="submit">Salva Modifiche</button>
-                    <button class="text-btn delete-btn" type="button" id="delete-btn">Elimina Contatto</button>
+                    <button class="modern-btn danger-btn" type="button" id="delete-btn">Elimina</button>
+                    <button class="modern-btn primary-btn" type="submit">Salva Modifiche</button>
                 </div>
             </form>                       
-        </main>
+        </div>
     </div>
 </body>
 <script type="module" src="./detail-script.js"></script>

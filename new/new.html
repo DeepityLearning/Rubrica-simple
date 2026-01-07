@@ -7,35 +7,40 @@
     <link rel="stylesheet" href="./new-style.css">
 </head>
 <body>
-    <div class="page">
-        <div>
-            <header>
-                <a class="action" href="../">🠈</a>
-                <h1>Nuovo Contatto</h1>
-            </header>
-            <main>
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nome</label>
-                        <input class="form-input" type="text" id="name" name="name" required placeholder="Mario">
-                    </div>
-                    <div class="form-group">
-                        <label for="surname">Cognome</label>
-                        <input class="form-input" type="text" id="surname" name="surname" placeholder="Rossi">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefono</label>
-                        <input class="form-input" type="tel" id="phone" name="phone" required placeholder="333 1234567">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input class="form-input" type="email" id="email" name="email" placeholder="mario@email.com">
-                    </div>
-                    
-                    <button class="text-btn" type="submit">Salva Contatto</button>
-                </form>
-            </main>
+    <div class="page-layout">
+        
+        <div class="fixed-header">
+            <a class="back-btn" href="../">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </a>
+            <h1>Nuovo Contatto</h1>
         </div>
+
+        <div class="scrollable-content">
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input class="modern-input" type="text" id="name" name="name" required placeholder="Es. Mario">
+                </div>
+                <div class="form-group">
+                    <label for="surname">Cognome</label>
+                    <input class="modern-input" type="text" id="surname" name="surname" placeholder="Es. Rossi">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefono</label>
+                    <input class="modern-input" type="tel" id="phone" name="phone" required placeholder="Es. 333 1234567">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="modern-input" type="email" id="email" name="email" placeholder="Es. mario@mail.com">
+                </div>
+                
+                <div class="btn-container">
+                    <button class="modern-btn primary-btn" type="submit">Salva Contatto</button>
+                </div>
+            </form>
+        </div>
+
     </div>
 </body>
 <script type="module" src="./new-script.js"></script>
